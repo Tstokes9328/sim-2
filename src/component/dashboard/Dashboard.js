@@ -22,6 +22,7 @@ class Dashboard extends Component {
     componentDidMount(){
         axios.get('/api/houses').then((response) => {
             this.setState({houses: response.data})
+            console.log(this.state.houses)
         })
     }
 
@@ -35,13 +36,13 @@ class Dashboard extends Component {
     render(){
         let houseList = this.state.houses.map((element, index) => {
             return(
-                    <House remove={this.removeHouse} id={element.id} name={element.name} address={element.address} city={element.city} state={element.state} zipcode={element.zipcode}/>
+                    <House remove={this.removeHouse} id={element.id} name={element.name} address={element.address} city={element.city} state={element.state} zipcode={element.zipcode} image={element.image} mortgage={element.mortgage} rent={element.desiredRent}/>
             )
         })
         return(
             <div>
                 {houseList}
-                <Link to="/wizard"><button>Add New Property</button></Link>
+                <Link to="/wizard/step1"><button>Add New Property</button></Link>
             </div>
         )
 

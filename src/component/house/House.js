@@ -8,6 +8,9 @@ export default function house(props){
             <p>{props.city}</p>
             <p>{props.state}</p>
             <p>{props.zipcode}</p>
+            <p>{props.mortgage}</p>
+            <img src={props.image} />
+            <p>{props.rent}</p>
             <button onClick={() => props.remove(props.id)}>Delete</button>
         </div>
     )
