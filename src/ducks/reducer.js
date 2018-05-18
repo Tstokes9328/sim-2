@@ -122,14 +122,8 @@ export default function reducer(state = initialState, action){
         case UPDATE_RENT:
             return Object.assign({}, state, {desiredRent: action.payload})
         case RESET_STATE:
-            return Object.assign({}, state, {initialState: action.payload})
+            return Object.assign({}, state, action.payload)
         default:
             return state
     }
 }
-
-// const UPDATE_NAME = "UPDATE_NAME";
-// const UPDATE_ADDRESS = "UPDATE_ADDRESS";
-// const UPDATE_CITY = "UPDATE_CITY";
-// const UPDATE_STATE = "UPDATE_STATE";
-// const UPDATE_ZIPCODE = "UPDATE_ZIPCODE";

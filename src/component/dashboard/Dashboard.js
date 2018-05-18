@@ -14,17 +14,23 @@ class Dashboard extends Component {
         this.state = {
             houses: []
         }
-        this.componentDidMount = this.componentDidMount.bind(this);
+        this.getUpdatedList = this.getUpdatedList.bind(this);
         this.removeHouse = this.removeHouse.bind(this);
     }
 
     /* Methods */
     componentDidMount(){
+        this.getUpdatedList();
+    }
+
+
+    getUpdatedList(){
         axios.get('/api/houses').then((response) => {
             this.setState({houses: response.data})
             console.log(this.state.houses)
         })
     }
+
 
     removeHouse(id){
         axios.delete(`/api/houses/${id}`).then((response) => {

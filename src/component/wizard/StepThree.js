@@ -22,7 +22,7 @@ class StepThree extends Component {
                 Desired Monthly Rent Amount:
                 <input type="text" value={this.props.desiredRent} onChange={(event) => this.props.updateRent(event.target.value)}/>
                 <Link to="/wizard/step2"><button>Previous Step</button></Link>
-                <Link to="/"><button onClick={() => console.log(this.props)}>Complete</button></Link>
+                <Link to="/"><button onClick={() => this.newHouse()}>Complete</button></Link>
             </div>
         )
     }
