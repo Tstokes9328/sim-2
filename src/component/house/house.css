@@ -1,0 +1,43 @@
+.house-container {
+    background-color: #DEDEDE;
+    width: 90%;
+    height: 25vh;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.house-box {
+    background-color: #DEDEDE;
+    height: 25vh;
+    width:33%;
+}
+
+.image {
+    width: 175px;
+    height: 150px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.house-box > p {
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin-top: 12px;
+    margin-left: 15px;
+}
+
+.dlt-btn {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    font-size: 18px;
+    padding: 2px;
+    height: 20px;
+    width: 20px;
+
+}
