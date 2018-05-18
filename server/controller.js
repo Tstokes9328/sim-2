@@ -16,7 +16,7 @@ module.exports = {
     deleteHouse: (req, res) => {
         let {id} = req.params;
         req.app.get('db').remove_house([id]).then(() => {
-            req.status(200).send('House Removed!')
+            req.send('House Removed!')
         })
     }
 }
