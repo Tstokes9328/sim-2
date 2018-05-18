@@ -1,0 +1,11 @@
+.header {
+    background-color: #519872;
+    width: 100%;
+    height: 10vh;
+}
+
+.logo {
+    float: left;
+    margin-top: 15px;
+    margin-left: 325px;
+}

@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 
     /* Importing Components */
 import House from '../house/House';
+import './dashboard.css';
 
 
 class Dashboard extends Component {
@@ -46,7 +47,7 @@ class Dashboard extends Component {
             )
         })
         return(
-            <div>
+            <div className="dashboard">
                 {houseList}
                 <Link to="/wizard/step1"><button>Add New Property</button></Link>
             </div>
